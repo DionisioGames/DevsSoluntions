@@ -39,3 +39,4 @@ class FakeEmailService(EmailService):
 
     def send(self, recipient: str, subject: str, body: str) -> None:
         self.sent.append((recipient, subject, body))
+        print(f"[TESTING] E-mail para {recipient}: {body}", flush=True)
